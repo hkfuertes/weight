@@ -1,0 +1,16 @@
+version: '3'
+
+x-base: &env
+  build: .
+  volumes:
+    - .:/app
+  working_dir: /app
+  network_mode: "host"
+  
+
+services:
+  bash:
+    <<: *env
+    tty: true 
+    stdin_open: true
+    command: /bin/bash
