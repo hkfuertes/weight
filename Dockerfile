@@ -1,8 +1,9 @@
 # Install Operating system and dependencies
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 RUN apt-get update 
-RUN apt-get install -y curl git wget unzip #libgconf-2-4 gdb libstdc++6 libglu1-mesa fonts-droid-fallback lib32stdc++6 python3
+RUN apt-get install -y curl git wget unzip clang cmake git ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
+
 RUN apt-get clean
 
 # download Flutter SDK from Flutter Github repo

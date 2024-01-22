@@ -1,11 +1,16 @@
 version: '3'
 
+# To run DISPLAY/X11/GUI --> Run: `sudo xhost +local:docker` on host!
 x-base: &env
   build: .
   volumes:
     - .:/app
+    - /tmp/.X11-unix:/tmp/.X11-unix
   working_dir: /app
   network_mode: "host"
+  environment:
+      - DISPLAY=${DISPLAY}
+  privileged: true
   
 
 services:
@@ -14,3 +19,7 @@ services:
     tty: true 
     stdin_open: true
     command: /bin/bash
+  
+  linux:
+    <<: *env
+    command: bash -c "flutter pub get && flutter run"
