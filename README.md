@@ -3,6 +3,10 @@ A simple app to track your weight.
 
 ## Features
 - Mi Scale Connection
+- Export to Google Sheets
+
+## TODO
+- Theme/Palette
 
 ---
 ## DEV Environment
