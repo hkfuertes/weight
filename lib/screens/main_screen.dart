@@ -20,33 +20,28 @@ class MainScreen extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       bottomNavigationBar: BottomAppBar(
-          color: Colors.transparent,
-          surfaceTintColor: Colors.transparent,
-          shadowColor: Colors.transparent,
-          child: Row(
-            children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                  )),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.add_chart,
-                    color: Colors.white,
-                  )),
-              const Padding(
-                padding: EdgeInsets.only(left: 8.0),
-                child: Text(
-                  "Weights",
-                  textScaler: TextScaler.linear(1.6),
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              )
-            ],
-          )),
+        color: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+        shadowColor: Colors.transparent,
+        child: Row(
+          children: [
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                )),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text(
+                "Weights",
+                textScaler: TextScaler.linear(1.6),
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
